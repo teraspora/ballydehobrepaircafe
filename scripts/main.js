@@ -1,7 +1,7 @@
 const cafe_name = "Ballydehob Repair Café";
 
 // Inject cafe name wherever .cafe-name class exists
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", _ => {
   document.querySelectorAll(".cafe-name").forEach(el => {
     el.textContent = cafe_name;
   });
@@ -13,10 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     tagline.textContent = "";
     tagline.style.visibility = "visible";
     let i = 0;
-    const type = () => {
+    const type = _ => {
       if (i < text.length) {
         tagline.textContent += text[i++];
-        setTimeout(type, 45);
+        setTimeout(type, 2400 / text.length);
       } else {
         tagline.classList.add("done");
       }
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Glitch effect on logo
   const logo = document.querySelector(".logo-glitch");
   if (logo) {
-    setInterval(() => {
+    setInterval(_ => {
       if (Math.random() > 0.85) {
         logo.classList.add("glitching");
-        setTimeout(() => logo.classList.remove("glitching"), 150);
+        setTimeout(_ => logo.classList.remove("glitching"), 150);
       }
     }, 2000);
   }
@@ -38,10 +38,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Scanline flicker
   const scanlines = document.querySelector(".scanlines");
   if (scanlines) {
-    setInterval(() => {
+    setInterval(_ => {
       if (Math.random() > 0.92) {
         scanlines.style.opacity = "0.08";
-        setTimeout(() => scanlines.style.opacity = "0.04", 80);
+        setTimeout(_ => scanlines.style.opacity = "0.04", 80);
       }
     }, 1500);
   }

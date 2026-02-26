@@ -12,15 +12,15 @@
   --bg2:         #111109;
   --panel:       #141410;
   --border:      #2a2a1e;
-  --green:       #7fff5f;
-  --green-dim:   #3a6628;
-  --amber:       #ffb347;
+  --text-primary:       #05abff  ;
+  --text-primary-dim:   #0a4a99;
+  --amber:       #ffc36d;
   --amber-dim:   #7a4a10;
   --rust:        #c0392b;
   --text:        #c8c8a0;
-  --text-dim:    #5a5a40;
+  --text-dim:    #ffb74f;
   --text-bright: #e8e8c0;
-  --glow:        0 0 8px rgba(127,255,95,0.5);
+  --glow:        0 0 8px rgba(5,122,255,0.5);
   --glow-amber:  0 0 8px rgba(255,179,71,0.5);
 }
 
@@ -95,46 +95,6 @@ body::after {
   50%       { transform: scale(1.1); opacity: 0.8; }
 }
 
-/* ═══════════════════════════════════════════════════════
-   NAVIGATION
-   ═══════════════════════════════════════════════════════ */
-nav {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid var(--border);
-  background: rgba(10,10,8,0.92);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.9rem 2.5rem;
-}
-
-.nav-logo {
-  font-family: 'VT323', monospace;
-  font-size: 1.5rem;
-  color: var(--green);
-  text-shadow: var(--glow);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-}
-.nav-logo span { color: var(--amber); }
-
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a {
-  color: var(--text-dim);
-  text-decoration: none;
-  font-size: 0.85rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  transition: color 0.2s, text-shadow 0.2s;
-}
-.nav-links a:hover,
-.nav-links a.active {
-  color: var(--amber);
-  text-shadow: var(--glow-amber);
-}
 
 /* ═══════════════════════════════════════════════════════
    SHARED SECTION UTILITIES
@@ -147,7 +107,7 @@ section + section { border-top: 1px solid var(--border); }
   font-size: 0.7rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
   display: block;
   margin-bottom: 0.5rem;
@@ -176,15 +136,15 @@ section + section { border-top: 1px solid var(--border); }
   cursor: pointer;
 }
 .btn-primary {
-  border-color: var(--green);
+  border-color: var(--text-primary);
   color: var(--bg);
-  background: var(--green);
+  background: var(--text-primary);
 }
 .btn-primary:hover {
   background: transparent;
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
-  box-shadow: var(--glow), inset 0 0 12px rgba(127,255,95,0.1);
+  box-shadow: var(--glow), inset 0 0 12px rgba(5,122,255,0.1);
 }
 .btn-secondary {
   border-color: var(--amber-dim);
@@ -230,7 +190,7 @@ footer {
    GLITCH LOGO
    ═══════════════════════════════════════════════════════ */
 .logo-glitch {
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
   display: inline-block;
   position: relative;
@@ -265,7 +225,7 @@ footer {
 .hero-corner {
   position: absolute;
   width: 120px; height: 120px;
-  border-color: var(--green-dim);
+  border-color: var(--text-primary-dim);
   border-style: solid;
   opacity: 0.4;
 }
@@ -274,19 +234,9 @@ footer {
 
 .hero-inner { position: relative; max-width: 900px; }
 
-.hero-eyebrow {
-  font-size: 0.75rem;
-  letter-spacing: 0.35em;
-  text-transform: uppercase;
-  color: var(--green);
-  text-shadow: var(--glow);
-  margin-bottom: 1.2rem;
-  animation: fadeUp 0.6s ease both;
-}
-
 .hero-title {
   font-family: 'VT323', monospace;
-  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-size: clamp(3.5rem, 9vw, 4rem);
   line-height: 0.95;
   color: var(--text-bright);
   margin-bottom: 0.5rem;
@@ -308,9 +258,10 @@ footer {
   color: var(--text);
   max-width: 620px;
   margin-bottom: 3rem;
-  border-right: 2px solid var(--green);
+  border-right: 2px solid var(--text-primary);
   padding-right: 4px;
   animation: fadeUp 0.6s 0.3s ease both;
+  white-space: pre-wrap;
 }
 .typewriter.done {
   animation: blink-cursor 0.8s step-end infinite;
@@ -346,7 +297,7 @@ footer {
 .stat-num {
   font-family: 'VT323', monospace;
   font-size: 3rem;
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
   display: block;
   line-height: 1;
@@ -377,13 +328,13 @@ footer {
   overflow: hidden;
   transition: border-color 0.25s;
 }
-.manifesto-block:hover { border-color: var(--green-dim); }
+.manifesto-block:hover { border-color: var(--text-primary-dim); }
 .manifesto-block::before {
   content: '';
   position: absolute;
   top: 0; left: 0; right: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--green), transparent);
+  background: linear-gradient(90deg, var(--text-primary), transparent);
   opacity: 0;
   transition: opacity 0.25s;
 }
@@ -428,7 +379,7 @@ footer {
 .step-num {
   font-family: 'VT323', monospace;
   font-size: 5rem;
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
   opacity: 0.18;
   position: absolute;
@@ -467,8 +418,8 @@ footer {
   text-shadow: var(--glow-amber);
 }
 .fix-tag.highlight {
-  border-color: var(--green-dim);
-  color: var(--green);
+  border-color: var(--text-primary-dim);
+  color: var(--text-primary);
   text-shadow: var(--glow);
 }
 
@@ -478,8 +429,8 @@ footer {
 .terminal-section { max-width: 900px; margin: 0 auto; }
 .terminal {
   background: #050504;
-  border: 1px solid var(--green-dim);
-  box-shadow: 0 0 30px rgba(127,255,95,0.06), inset 0 0 40px rgba(0,0,0,0.5);
+  border: 1px solid var(--text-primary-dim);
+  box-shadow: 0 0 30px rgba(5,122,255,0.06), inset 0 0 40px rgba(0,0,0,0.5);
   padding: 1.5rem 2rem;
 }
 .terminal-bar {
@@ -496,15 +447,15 @@ footer {
 .dot.g { background: var(--green); opacity: 0.7; }
 .terminal-title { font-size: 0.75rem; color: var(--text-dim); margin-left: 0.5rem; letter-spacing: 0.2em; }
 
-.terminal-body { font-size: 0.9rem; color: var(--green); line-height: 2; }
-.terminal-body .prompt { color: var(--green-dim); }
+.terminal-body { font-size: 0.9rem; color: var(--text-primary); line-height: 2; }
+.terminal-body .prompt { color: var(--text-primary-dim); }
 .terminal-body .output { color: var(--text); padding-left: 1.5rem; }
 .terminal-body .warn { color: var(--amber); }
 .terminal-body .err  { color: var(--rust); }
 .terminal-body .cursor {
   display: inline-block;
   width: 8px; height: 1em;
-  background: var(--green);
+  background: var(--text-primary);
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
 }
@@ -528,18 +479,11 @@ footer {
   opacity: 0.15;
 }
 .page-header-inner { position: relative; max-width: 800px; }
-.page-eyebrow {
-  font-size: 0.7rem;
-  letter-spacing: 0.4em;
-  text-transform: uppercase;
-  color: var(--green);
-  text-shadow: var(--glow);
-  margin-bottom: 0.8rem;
-}
+
 .page-title {
   font-family: 'VT323', monospace;
-  font-size: clamp(2.5rem, 7vw, 5rem);
-  color: var(--text-bright);
+  font-size: clamp(2.5rem, 7vw, 4rem);
+  color: var(--text-primary);
   line-height: 1;
   margin-bottom: 1rem;
 }
@@ -582,7 +526,7 @@ footer {
 }
 .panel-header-dot {
   width: 8px; height: 8px; border-radius: 50%;
-  background: var(--green);
+  background: var(--text-primary);
   box-shadow: var(--glow);
   animation: blink 2s step-end infinite;
 }
@@ -603,15 +547,15 @@ footer {
 .times-table td { padding: 0.75rem 0; font-size: 0.9rem; }
 .times-table .day    { color: var(--text-dim); }
 .times-table .time   { color: var(--text-bright); text-align: right; }
-.times-table .open   { color: var(--green); text-shadow: var(--glow); }
+.times-table .open   { color: var(--text-primary); text-shadow: var(--glow); }
 .times-table .closed { color: var(--text-dim); font-style: italic; }
 .times-table .badge {
   font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   padding: 2px 8px;
-  border: 1px solid var(--green-dim);
-  color: var(--green);
+  border: 1px solid var(--text-primary-dim);
+  color: var(--text-primary);
   margin-left: 0.5rem;
   vertical-align: middle;
 }
@@ -642,12 +586,12 @@ footer {
 .map-pin { position: relative; z-index: 1; text-align: center; }
 .map-pin-icon {
   font-size: 2rem;
-  filter: drop-shadow(0 0 6px var(--green));
+  filter: drop-shadow(0 0 6px var(--text-primary));
   animation: pulse 2s ease-in-out infinite;
 }
 .map-pin-label {
   font-size: 0.7rem;
-  color: var(--green);
+  color: var(--text-primary);
   text-shadow: var(--glow);
   letter-spacing: 0.15em;
   text-transform: uppercase;
