@@ -691,6 +691,6 @@ address { font-style: normal; }
   border: 1px solid var(--amber-dim);
   background: rgba(122,74,16,0.08);
   font-size: 0.85rem;
-  color: var(--text-dim);
+  color: var(--text-primary);
 }
 .notice strong { color: var(--amber); }
