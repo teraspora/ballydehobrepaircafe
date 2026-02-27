@@ -264,6 +264,15 @@ footer {
     flex: 1 1 auto;
     min-width: unset;
   }
+  .btn {
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+  }
+  .hero-cta {
+    flex-direction: column;
+  }
 }
 
 .hero-title {
