@@ -2,9 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=5.0, user-scalable=yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Ballydehob Repair Café" />
+  <meta name="theme-color" content="#0a0a08" />
+  <meta name="description" content="Visit Ballydehob Repair Café - Opening times, location, and what you can bring." />
   <title>About &amp; Visit — Ballydehob Repair Café</title>
   <link rel="stylesheet" href="styles/main.css">
+  <style>
+    /* Responsive iframe container */
+    .iframe-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+    }
+    .iframe-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--border);
+    }
+  </style>
 </head>
 <body>
 
@@ -57,7 +80,10 @@
       <span class="panel-label">// location //</span>
     </div>
     <div class="panel-body">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.2993917782487!2d-9.463546622985524!3d51.56274480665829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4845a1bd919e7e5b%3A0x971c82e128011aba!2sBank%20House%20Ballydehob!5e0!3m2!1sen!2sie!4v1772120274243!5m2!1sen!2sie" width="100%" height="350" style="border:0; margin-bottom: 1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div class="iframe-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2480.2993917782487!2d-9.463546622985524!3d51.56274480665829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4845a1bd919e7e5b%3A0x971c82e128011aba!2sBank%20House%20Ballydehob!5e0!3m2!1sen!2sie!4v1772120274243!5m2!1sen!2sie" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div style="margin-bottom: 1.5rem; margin-top: 1.5rem;"></div>
       <address>
         <div class="address-line">
           <span class="address-key">Venue</span>
