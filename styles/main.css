@@ -914,6 +914,19 @@ address { font-style: normal; }
    ABOUT PAGE — WELCOME & BRING SECTIONS
    ═══════════════════════════════════════════════════════ */
 .welcome-panel { grid-column: 1 / -1; }
+.repair-cafe-panel { grid-column: 1 / -1; }
+
+/* make repair-cafe header match welcome-panel styling */
+.repair-cafe-panel .panel-label {
+  color: var(--text-primary);
+  text-shadow: var(--glow);
+}
+
+/* utility class for blue labelled panels */
+.blue-label {
+  color: var(--text-primary);
+  text-shadow: var(--glow);
+}
 .welcome-text {
   font-family: 'Special Elite', cursive;
   font-size: 1.1rem;
