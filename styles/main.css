@@ -279,6 +279,10 @@ footer {
 }
 .footer-links a:hover { color: var(--amber); }
 
+/* make contact email stand out */
+.email-link { color: var(--amber); text-decoration: underline; }
+.email-link:hover { text-shadow: var(--glow-amber); }
+
 /* ═══════════════════════════════════════════════════════
    GLITCH LOGO
    ═══════════════════════════════════════════════════════ */
@@ -915,6 +919,7 @@ address { font-style: normal; }
    ═══════════════════════════════════════════════════════ */
 .welcome-panel { grid-column: 1 / -1; }
 .repair-cafe-panel { grid-column: 1 / -1; }
+.history-panel { grid-column: 1 / -1; }
 
 /* make repair-cafe header match welcome-panel styling */
 .repair-cafe-panel .panel-label {
