@@ -366,6 +366,12 @@ footer {
   min-height: 10.5rem;
 }
 
+/* Skip animation on return visits (no animation at all) */
+.typewriter.skip-animation {
+  animation: none;
+  visibility: visible;
+}
+
 /* ─── DISABLE TYPEWRITER ON MOBILE FOR PERFORMANCE ─── */
 @media (max-width: 480px) {
   .typewriter {

@@ -12,24 +12,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Typewriter effect for hero tagline (disabled on mobile and when motion is reduced)
   const tagline = document.querySelector(".typewriter");
-  if (tagline && !isMobile() && !prefersReducedMotion()) {
+  if (tagline) {
+    const isFirstVisit = !localStorage.getItem("typewriterSeen");
     const text = tagline.dataset.text || tagline.textContent;
-    tagline.textContent = "";
-    tagline.style.visibility = "visible";
-    let i = 0;
-    const type = () => {
-      if (i < text.length) {
-        tagline.textContent += text[i++];
-        setTimeout(type, 2400 / text.length);
-      } else {
-        tagline.classList.add("done");
-      }
-    };
-    setTimeout(type, 600);
-  } else if (tagline) {
-    // Show text immediately on mobile and when motion is reduced
-    tagline.style.visibility = "visible";
-    tagline.classList.add("done");
+    
+    if (isFirstVisit && !isMobile() && !prefersReducedMotion()) {
+      // First visit: run typewriter animation
+      tagline.textContent = "";
+      tagline.style.visibility = "visible";
+      let i = 0;
+      const type = () => {
+        if (i < text.length) {
+          tagline.textContent += text[i++];
+          setTimeout(type, 2400 / text.length);
+        } else {
+          tagline.classList.add("done");
+          localStorage.setItem("typewriterSeen", "true");
+        }
+      };
+      setTimeout(type, 600);
+    } else {
+      // Return visit or mobile/reduced motion: show text immediately without animation
+      tagline.textContent = text;
+      tagline.style.visibility = "visible";
+      tagline.classList.add("done");
+      tagline.classList.add("skip-animation");
+    }
   }
 
   // Glitch effect on logo (disabled on mobile and when motion is reduced)
