@@ -1122,3 +1122,18 @@ address { font-style: normal; }
   color: var(--text-primary);
   text-decoration: none;
 }
+
+@media (max-width: 480px) {
+  body {
+    font-size: 18px;
+  }
+  .panel,
+  .panel-body,
+  .welcome-text,
+  .history-section,
+  .bring-item,
+  .manifesto-block,
+  .step {
+    font-size: 1.05em;
+  }
+}
